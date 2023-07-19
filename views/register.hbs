@@ -1,0 +1,53 @@
+{{> messages}}
+<form action="/auth/register" method="POST" id="registerForm">
+
+  <h3><i class="fas fa-user-plus"></i> Register</h3>
+  <p>Join our community of online Note Making</p>
+  <div class="input-field">
+    <i class="material-icons prefix">account_circle</i>
+    <input type="text" name="displayName" id="displayName" value="{{#if displayName}}{{displayName}}{{/if}}" required>
+    <label for="displayName">Enter Your Displayname*</label>
+  </div>
+  <div class="input-field">
+    <i class="material-icons prefix">account_circle</i>
+    <input type="text" name="firstName" id="firstName" value="{{#if firstName}}{{firstName}}{{/if}}" required>
+    <label for="firstName">Enter Your Firstname*</label>
+  </div>
+  <div class="input-field">
+    <i class="material-icons prefix">account_circle</i>
+    <input type="text" name="lastName" id="lastName" value="{{#if lastName}}{{lastName}}{{/if}}" >
+    <label for="lastName">Enter Your Lastname</label>
+  </div>
+  <div class="input-field">
+    <i class="material-icons prefix">email</i>
+    <input type="email" name="email" id="email" class="validate" value="{{#if email}}{{email}}{{/if}}" required >
+    <label for="email">Enter Your Email*</label>
+  </div>
+
+  <div class="input-field">
+    <i class="material-icons prefix">lock</i>
+    <input type="password" name="password" id="password" value="{{#if password}}{{password}}{{/if}}" required>
+    <label for="password">Enter password*</label>
+  </div>
+  <div class="input-field">
+    <i class="material-icons prefix">vpn_key</i>
+    <input type="password" name="password2" id="password2" value="{{#if password2}}{{password2}}{{/if}}" required>
+    <label for="password2">Confirm password*</label>
+  </div>
+  
+  <p class="right">Already have an account?
+    <a href="/auth/login" class="modal-trigger">login</a></p>
+  <button
+    type="submit"
+    class="btn btn-block waves-effect waves-light"
+    style="width: 100%;"
+  >Register</button>
+  <p class="center">Or</p>
+  <div class="section">
+    <a href="/auth/google" class="btn red darken-1">
+      <i class="fab fa-google left"></i>
+      Log In With Google
+    </a>
+  </div>
+
+</form>

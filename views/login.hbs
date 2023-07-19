@@ -1,0 +1,36 @@
+{{> messages}}
+<form action="/auth/login" method="POST" id="loginForm">
+
+  <h3><i class="fas fa-sign-in-alt"></i> Login</h3>
+  
+  
+  
+  <div class="input-field">
+    <i class="material-icons prefix">email</i>
+    <input type="email" name="email" id="email" class="validate" required >
+    <label for="email">Enter Your Email*</label>
+  </div>
+
+  <div class="input-field">
+    <i class="material-icons prefix">lock</i>
+    <input type="password" name="password" id="password" >
+    <label for="password">Enter password*</label>
+  </div>
+
+  
+  <p class="right">Don't have an account?
+    <a href="/auth/register" class="modal-trigger">register</a></p>
+  <button
+    type="submit"
+    class="btn btn-block waves-effect waves-light"
+    style="width: 100%;"
+  >Login</button>
+  <p class="center">Or</p>
+  <div class="section">
+    <a href="/auth/google" class="btn red darken-1">
+      <i class="fab fa-google left"></i>
+      Log In With Google
+    </a>
+  </div>
+
+</form>

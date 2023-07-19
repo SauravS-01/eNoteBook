@@ -1,0 +1,42 @@
+<h3>Add Note</h3>
+<div class="row">
+    <form action="/notes" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Write Your Note Here:</h5>
+                <textarea id="notebody" name="body"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.21.0/ckeditor.js" 
+    integrity="sha512-ff67djVavIxfsnP13CZtuHqf7VyX62ZAObYle+JlObWZvS4/VQkNVaFBOO6eyx2cum8WtiZ0pqyxLCQKC7bjcg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+        
+        CKEDITOR.replace('notebody', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
+</script>
