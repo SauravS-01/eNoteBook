@@ -15,7 +15,7 @@ const flash = require("connect-flash");
 
 
 // Load config
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
 
 // Passport config
 require("./config/passport")(passport);
